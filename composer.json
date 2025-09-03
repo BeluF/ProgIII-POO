@@ -1,10 +1,10 @@
 {
-    "name": "bel/poo",
-    "description": "Sistema de ejemplo - POO en PHP",
+    "name": "bel/SistemaDeTickets",
+    "description": "Sistema de Tickets - POO en PHP",
     "type": "project",
     "autoload": {
         "psr-4": {
-            "Bel\\Poo\\": "src/"
+            "App\\": "src/"
         }
     },
     "authors": [
