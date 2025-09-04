@@ -16,14 +16,14 @@ class AuthService{
         if(!$user->verificaPassword($password)) return false; //Contraseña incorrecta
 
         //Guardar los datos mínimos en sesión
-        $_SESSION["auth"] = ['username' => $user->username()];
+        $_SESSION['auth'] = ['username' => $user->username()];
         return true;
     }
 
     //Cerrar la sesión
     public function logout(): bool{
-        if(isset($_SESSION["auth"])){ //Si hay sesión iniciada
-            unset($_SESSION["auth"]); //Destruir
+        if(isset($_SESSION['auth'])){ //Si hay sesión iniciada
+            unset($_SESSION['auth']); //Destruir
         }
         return true;        
     }
@@ -36,7 +36,7 @@ class AuthService{
     //Protección de rutas: si no está logueado, redirigir al login
     public function isLoged(): void{
         if (!$this->usernameActual()) {
-            header("Location: /login"); // Redirección HTTP
+            header('Location: /login'); // Redirección HTTP
             exit;                       // Corta la ejecución
         }
     }

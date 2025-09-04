@@ -1,5 +1,5 @@
 {
-    "name": "bel/SistemaDeTickets",
+    "name": "bel/sistema-de-tickets",
     "description": "Sistema de Tickets - POO en PHP",
     "type": "project",
     "autoload": {

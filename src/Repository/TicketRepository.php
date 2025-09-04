@@ -39,7 +39,7 @@ class TicketRepository {
     //Crear un nuevo ticket
     public function create(string $name, string $descripcion, string $created_for): Ticket {
         $this->seed();
-        $id = $this->nextID(); //Genera el ID
+        $id = $this->nextId(); //Genera el ID
         $t = new Ticket($id, $name, $descripcion, TicketStatus::OPEN, $created_for, null, date('Y-m-d H:i:s'), null);
         $this->insert($t); //Guarda
         return $t;
